@@ -1,0 +1,86 @@
+.banner {
+    width: 100vw;
+    overflow: hidden;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .room-slider__wrapper button {
+        display: none;
+    }
+
+    .room-slider__item {
+        text-align: center;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+
+    .slick-dots li button {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        font-size: 0;
+        border: 2px solid #fff;
+        background-color: transparent;
+    }
+
+    .slick-dots li.slick-active button {
+        background-color: #1fba0a;
+        border: #1fba0a;
+
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &__slider {
+        background-image: url('/img/banner\ ng-320.png');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 240px;
+        width: 100vw;
+    }
+
+    &__title {
+        @include fontStyle(49px, left, $Lemon, #84c604, 1.2, 400, initial);
+        padding: 40px 0 0 0;
+        max-width: 340px;
+    }
+
+    &__date {
+        @include fontStyle(12px, left, $OpenSansItalic, #fff, 1.2, 400, initial);
+        font-style: italic;
+        margin-top: 20px;
+    }
+
+    &__discount {
+        @include fontStyle(14px, center, $VariableOpenSans, #fff, 1.2, bold, initial);
+        @include flex(center, center);
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        min-width: 70px;
+        min-height: 70px;
+        background: linear-gradient(to bottom, #dd2024, #b81f24);
+        border-radius: 50%;
+
+        P {
+            width: 60px;
+        }
+    }
+
+    &__link {
+        display: none;
+    }
+}

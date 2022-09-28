@@ -48,16 +48,17 @@
         border: none;
         background-color: transparent;
         position: relative;
+        cursor: pointer;
 
         &:before {
             @include pseudo;
             top: 0;
             width: 100%;
             height: 2px;
-            background-color: #4ec83d;
+            background-color: $HeadBurger;
             box-shadow:
-                0 6px 0px #4ec83d,
-                0 12px 0px #4ec83d,
+                0 6px 0px $HeadBurger,
+                0 12px 0px $HeadBurger,
             ;
         }
     }
@@ -86,7 +87,7 @@
 
         &:hover {
             color: #fff;
-            background-color: #84c604;
+            background-color: $BgGreen;
         }
 
 
@@ -107,7 +108,7 @@
 
         &:hover {
             color: #fff;
-            background-color: #84c604;
+            background-color: $BgGreen;
         }
 
     }
@@ -141,7 +142,7 @@
 
         &:hover {
             color: #fff;
-            background-color: #84c604;
+            background-color: $BgGreen;
         }
     }
 
@@ -155,6 +156,7 @@
         top: 15px;
         right: 15px;
         transform-origin: center;
+        cursor: pointer;
 
 
         span {
@@ -224,7 +226,7 @@
     }
 
     #menu__check:checked~&__label {
-        background: #84c604;
+        background: $BgGreen;
         color: #fff;
     }
 

@@ -1,0 +1,81 @@
+@media(min-width:1170px) {
+    .banner {
+        .slick-dots {
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 40px;
+            gap: 20px;
+        }
+
+        .slick-arrow {
+            @include flex(row, center);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 45%;
+            border-radius: 50%;
+            outline: none;
+            z-index: 10;
+            font-size: 0 !important;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+        }
+
+        .slick-arrow.slick-prev {
+            left: 1%;
+
+            &::before {
+                content: '\e900';
+                font-family: 'icomoon';
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        .slick-arrow.slick-next {
+            right: 1%;
+
+            &::before {
+                content: '\e901';
+                font-family: 'icomoon';
+                color: #fff;
+                font-size: 20px;
+
+            }
+        }
+
+        &__slider {
+            background-image: url('/img/banner\ bg.png');
+            background-size: cover;
+            min-height: 675px;
+        }
+
+        &__title {
+            padding: 130px 0 0 0;
+            font-size: 110px;
+        }
+
+        &__date {
+            font-size: 26.38px;
+            margin-top: 40px;
+        }
+
+        &__link {
+            margin-top: 60px;
+            min-width: 260px;
+            font-size: 16px;
+        }
+
+        &__discount {
+            min-width: 140px;
+            min-height: 140px;
+            font-size: 28.78px;
+
+            p {
+                width: 130px;
+            }
+        }
+    }
+}
