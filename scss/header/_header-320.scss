@@ -1,0 +1,244 @@
+.header {
+    position: relative;
+
+    &__wrapper {
+        @include flex;
+        min-height: 55px;
+    }
+
+    &__list {
+        @include flex;
+        gap: 15px;
+    }
+
+    &__logo {
+        margin-left: 30px;
+    }
+
+    .map {
+        display: none;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .call {
+        display: none;
+    }
+
+}
+
+.menu {
+    input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .hamburger-menu {
+        display: block;
+        width: 20px;
+        height: 18px;
+        border: none;
+        background-color: transparent;
+        position: relative;
+
+        &:before {
+            @include pseudo;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4ec83d;
+            box-shadow:
+                0 6px 0px #4ec83d,
+                0 12px 0px #4ec83d,
+            ;
+        }
+    }
+
+    &__list {
+        padding: 40px 30px;
+        min-width: 100vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        transform: translateX(-100%);
+        z-index: 6;
+        transition: all .7s;
+    }
+
+    &__link {
+        @include fontStyle(10px, left, $OpenSemiBold, #000, 1.2, 700, uppercase);
+        @include flex(none, none, center);
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: #84c604;
+        }
+
+
+    }
+
+    &__item_disabled {
+        display: none;
+    }
+
+    &__label {
+        @include fontStyle(10px, left, $OpenSemiBold, #000, 1.2, 700, uppercase);
+        @include flex(none, none, center);
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: #84c604;
+        }
+
+    }
+
+    &__wrapper {
+        min-width: 100vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        z-index: 4;
+        transition: .8s;
+        visibility: hidden;
+    }
+
+    &__dropdown {
+        height: 0;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    &__dropdown-item {
+        @include fontStyle(10px, left, $OpenSemiBold, #000, 1.2, 700, uppercase);
+        @include flex(none, none, center);
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: #84c604;
+        }
+    }
+
+    &__burger {
+        @include flex(row, center);
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        transform-origin: center;
+
+
+        span {
+            width: 100%;
+            height: 1px;
+            background: #b4b4b4;
+            transform: rotate(45deg);
+            transform-origin: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #b4b4b4;
+                transform: rotate(-90deg);
+                transform-origin: center;
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
+    .phone {
+        @include fontStyle(13px, left, $VariableOpenSans, #000, 1.2, bold, uppercase);
+    }
+
+    .date {
+        @include fontStyle(10px, left, $OpenSemiBold, #000, 1.2, bold, normal);
+    }
+
+    &__info-call {
+        @include fontStyle(11px, center, $VariableOpenSans, #3dc32b, 1.2, 400, uppercase);
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #3dc32b;
+        transition: .5s;
+
+        &:hover {
+            color: #fff;
+            background-color: #3dc32b;
+        }
+
+    }
+
+    &__info-list {
+        @include flex(column, none, none);
+        margin-top: 10px;
+        gap: 10px
+    }
+
+    &__info-link {
+        @include flex(row, none);
+        gap: 5px;
+
+        a {
+            @include fontStyle(11px, left, $Myraid, #000, 1.2, 400, normal);
+        }
+    }
+
+    #menu__check:checked~&__label>&__dropdown {
+        height: auto;
+    }
+
+    #menu__check:checked~&__label {
+        background: #84c604;
+        color: #fff;
+    }
+
+    #header__check:checked~&__wrapper>&__list {
+        transform: translateX(0%);
+    }
+
+    #header__check:checked~&__wrapper {
+        background: rgba(0, 0, 0, 0.7);
+        visibility: visible;
+    }
+
+}
+
+.media-750 {
+    display: none;
+}

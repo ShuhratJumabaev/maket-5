@@ -1,0 +1,29 @@
+@mixin fontStyle($fs, $ta, $ff, $fclr, $lh, $fw: 400, $tt: none, $td: none) {
+    font-size: $fs;
+    font-weight: $fw;
+    text-decoration: $td;
+    text-align: $ta;
+    font-family: $ff;
+    text-transform: $tt;
+    color: $fclr;
+    line-height: $lh;
+}
+
+@mixin flex($ff: row, $jc: space-between, $ai: center) {
+    display: flex;
+    flex-flow: $ff;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin bgimg($bs, $bp) {
+    background-size: $bs;
+    background-position: $bp;
+    background-repeat: no-repeat;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    position: $pos;
+    display: $display;
+}
