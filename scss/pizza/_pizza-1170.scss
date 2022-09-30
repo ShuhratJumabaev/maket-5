@@ -1,0 +1,22 @@
+@media (min-width:1170px) {
+    .pizza {
+
+        &__wrapper {
+            margin-top: 80px;
+        }
+
+        &__slogan {
+            p {
+                font-size: 60px;
+            }
+        }
+
+        &__item {
+            opacity: 1;
+            width: 263px;
+
+        }
+
+
+    }
+}

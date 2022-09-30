@@ -8,13 +8,6 @@
         overflow: hidden;
     }
 
-    .room-slider__wrapper button {
-        display: none;
-    }
-
-    .room-slider__item {
-        text-align: center;
-    }
 
     .slick-dots {
         display: flex;
@@ -29,7 +22,7 @@
         height: 15px;
         border-radius: 15px;
         font-size: 0;
-        border: 2px solid #fff;
+        border: 2px solid #c2c2c2;
         background-color: transparent;
     }
 

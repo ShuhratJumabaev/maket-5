@@ -1,0 +1,160 @@
+.rolls {
+    overflow: hidden;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 30px;
+    }
+
+    .slick-slide.slick-center {
+        opacity: 1;
+        transition: .5s;
+    }
+
+    &__wrapper {
+        margin-top: 70px;
+    }
+
+    &__slogan {
+        @include flex(row, center);
+        gap: 30px;
+
+        p {
+            @include fontStyle(44px, center, $Lemon, $TextBlue, 0.646, 400);
+        }
+    }
+
+    &__slider {
+        margin-top: 45px;
+    }
+
+    &__item {
+        box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        width: 230px;
+        opacity: 0.6;
+        transition: .5s;
+        padding-bottom: 40px;
+    }
+
+    &__img-750 {
+        display: none;
+    }
+
+    &__img {
+        min-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        @include flex(column, center);
+        margin-top: 25px;
+        gap: 17px;
+    }
+
+    &__title {
+        @include fontStyle(20px, center, $VariableOpenSans, #000, 1.422, bold);
+    }
+
+    &__info {
+        @include flex(row, center);
+        gap: 10px;
+
+        P {
+            @include fontStyle(12px, center, $VariableOpenSans, #000, 1.667);
+            position: relative;
+
+            &:before {
+                @include pseudo;
+                right: -5px;
+                top: 25%;
+                width: 1px;
+                height: 50%;
+                background: #000;
+            }
+        }
+
+        p:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__price {
+        @include flex;
+        gap: 45px;
+
+        .price {
+            @include fontStyle(22px, left, $RobotoSlab, #000, 1.292, bold);
+        }
+    }
+
+    &__amount {
+        @include flex;
+        gap: 15px;
+
+        button {
+            width: 15px;
+            height: 15px;
+            border: 1px solid $BtnGray;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+    }
+
+    &__balance {
+        @include fontStyle(14px, center, $VariableOpenSans, #000, 2.031, 400);
+    }
+
+    &__btn {
+        @include flex(row, center);
+
+        &::before {
+            @include pseudo;
+
+        }
+    }
+
+    &__left-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__right-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+
+        &::after {
+            @include pseudo;
+            width: 1px;
+            height: 70%;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__link {
+        @include fontStyle(14px, center, $OpenSemiBold, #fff, 2.031, 400, uppercase);
+        @include flex;
+        gap: 30px;
+        padding: 10px 40px;
+        background-color: $BgOrange;
+        border-radius: 5px;
+
+    }
+}

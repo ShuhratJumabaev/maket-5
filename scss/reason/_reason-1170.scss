@@ -1,0 +1,26 @@
+@media (min-width:1170px) {
+    .reason {
+
+        &__img-320 {
+            display: none;
+        }
+
+        &__img-750 {
+            display: block;
+        }
+
+        &__slogan {
+            margin-top: 100px;
+
+            p {
+                font-size: 60px;
+            }
+        }
+
+        &__wrapper {
+            @include flex(row wrap);
+            margin-top: 80px;
+            gap: 13px;
+        }
+    }
+}

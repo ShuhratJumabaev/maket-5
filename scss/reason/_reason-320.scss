@@ -1,0 +1,66 @@
+.reason {
+    #reason__check {
+        width: 0;
+        height: 0;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &__wrapper {
+        @include flex(column, center);
+        margin-top: 70px;
+        gap: 90px;
+        position: relative;
+    }
+
+    &__img-750,
+    &__img-320 {
+        display: none;
+    }
+
+    &__item {
+        @include flex(column, none,center);
+        gap: 30px;
+
+        p {
+            @include fontStyle(16px, center, $VariableOpenSans, rgb(77, 77, 77), 1.777, 400);
+        }
+    }
+
+    &__slogan {
+        @include flex(row, center);
+        gap: 30px;
+        padding: 10px;
+
+        p {
+            @include fontStyle(44px, center, $Lemon, $TextBlue, 1.2, 400);
+        }
+    }
+
+    &__item_disabled {
+        display: none;
+    }
+
+    &__more {
+        width: 100%;
+        @include fontStyle(14px, center, $OpenSemiBold, $BgOrange, 2.031, 400, uppercase);
+        padding: 5px 0;
+        background-color: #fff;
+        border: none;
+        border: 1px solid $BgOrange;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $BgOrange;
+            color: #fff;
+        }
+    }
+
+    #reason__check:checked~&__item_disabled {
+        display: flex;
+    }
+    #reason__check:checked~&__more{
+        position: absolute;
+        bottom: -100px;
+    }
+}

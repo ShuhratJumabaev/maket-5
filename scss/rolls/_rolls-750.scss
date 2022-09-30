@@ -1,0 +1,75 @@
+@media (min-width:750px) {
+    .rolls {
+        position: relative;
+
+        .slick-list {
+            overflow: hidden;
+        }
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-top: 45px;
+            margin-bottom: 30px;
+        }
+
+
+        .slick-dots li button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            font-size: 0;
+            background-color: $DotsGRay;
+            outline: none;
+            border: none;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: #67b437;
+        }
+
+        .slick-arrow {
+            border: none;
+            background-color: #fff;
+            position: absolute;
+            bottom: 25px;
+
+        }
+
+        .slick-arrow.slick-prev {
+            left: 35%;
+        }
+
+        .slick-arrow.slick-next {
+            right: 35%;
+        }
+
+        &__wrapper {
+            margin-top: 30px;
+        }
+
+        &__slogan {
+            p {
+                font-size: 48px;
+            }
+        }
+
+        &__item {
+            opacity: 1;
+            width: 220px;
+            transition: .5s;
+
+            &:hover {
+                box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.3);
+            }
+        }
+        &__img-320 {
+            display: none;
+        }
+        &__img-750 {
+            display: block;
+        }
+
+    }
+}
