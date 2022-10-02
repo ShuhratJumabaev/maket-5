@@ -19,7 +19,7 @@
     }
 
     &__item {
-        @include flex(column, none,center);
+        @include flex(column, none, center);
         gap: 30px;
 
         p {
@@ -59,7 +59,8 @@
     #reason__check:checked~&__item_disabled {
         display: flex;
     }
-    #reason__check:checked~&__more{
+
+    #reason__check:checked~&__more {
         position: absolute;
         bottom: -100px;
     }

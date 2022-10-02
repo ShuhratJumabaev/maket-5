@@ -1,0 +1,74 @@
+.contacts {
+    @include bgimg(cover, auto);
+    background-image: url('../img/contacts-320.png');
+    min-height: 520px;
+
+    &__wrapper {
+        padding: 50px 0;
+    }
+
+    &__question {
+        @include fontStyle(12.756px, left, $VariableOpenSans, #fff, 1.881, 400);
+    }
+
+    &__title {
+        @include fontStyle(35px, left, $Lemon, #fff, 1.2, 400);
+        margin-top: 5px;
+    }
+
+
+    input[class="contacts__name"],
+    input[class="contacts__tell"] {
+        @include fontStyle(14px, left, $VariableOpenSans, #fff, 1.714, 400);
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.133);
+        }
+    }
+
+    input[class="contacts__name"] {
+        margin-top: 35px;
+    }
+
+    input::placeholder {
+        @include fontStyle(14px, left, $VariableOpenSans, #fff, 1.714, 400);
+    }
+
+    &__submit {
+        @include fontStyle(14px, center, $VariableOpenSans, #fff, 1.2, bold, uppercase);
+        margin-top: 40px;
+        padding: 15px 0;
+        width: 100%;
+        background-color: $BgOrange;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    &__text {
+        @include fontStyle(12px, left, $VariableOpenSans, #fff, 1.2, 400);
+        opacity: 0.5;
+        margin-top: 15px;
+    }
+}
+
+.container {}
+
+.contacts__wrapper {}
+
+.contacts__slogan {}
+
+.contacts__title {}
+
+.contacts__form {}
+
+.contacts__name {}
+
+.contacts__submit {}

@@ -1,0 +1,106 @@
+.review {
+    &__slogan {
+        @include flex(row, center);
+        margin: 145px 0 55px;
+        gap: 10px;
+
+        p {
+            @include fontStyle(44px, center, $Lemon, $TextBlue, 0.646, 400);
+        }
+    }
+
+    &__img-750 {
+        display: none;
+    }
+
+    &__wrapper {
+        @include flex(column, center);
+        gap: 40px;
+        padding-bottom: 60px;
+    }
+
+    &__item {
+        padding: 25px 15px;
+        box-shadow: 0 0 2px $DotsGRay;
+    }
+
+    &__user {
+        @include flex(row, none);
+        gap: 15px;
+    }
+
+    &__user-list {
+        @include flex(column, none, none);
+        gap: 0;
+
+    }
+
+    &__user-name {
+        @include fontStyle(14px, left, $VariableOpenSans, $CommentBg, 1.896, bold);
+    }
+
+    &__user-date {
+        @include fontStyle(13px, left, $OpenSemiBold, $textBlackGRay, 2.187);
+    }
+
+    &__title {
+        @include fontStyle(14px, left, $VariableOpenSans, #000, 1.286, bold);
+        margin-top: 30px;
+    }
+
+    &__img {
+        margin-top: 30px;
+    }
+
+    button {
+        border: none;
+        background-color: none;
+        outline: none;
+    }
+
+    &__btn-list {
+        @include flex(row, none, none);
+        color: #bacada;
+        margin-top: 50px;
+        gap: 13px;
+    }
+
+    &__btn-heart:focus {
+        color: crimson;
+    }
+
+    &__btn-message {
+        @include flex(row, none);
+        gap: 5px;
+
+        P {
+            @include fontStyle(14px, left, $VariableOpenSans, #000, 1.286, bold);
+        }
+    }
+
+    &__link {
+
+        a {
+            @include flex(row, center);
+            @include fontStyle(14px, center, $VariableOpenSans, #fff, 1.286, bold);
+            margin-top: 20px;
+            border-radius: 3px;
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+            background-color: $CommentBg;
+
+            &::before {
+                content: '\e902';
+                font-family: 'icomoon';
+                font-size: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__item_disabled {
+        display: none;
+    }
+
+}

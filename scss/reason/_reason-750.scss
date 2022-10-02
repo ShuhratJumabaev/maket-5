@@ -2,6 +2,7 @@
     .reason {
         &__wrapper {
             @include flex(row wrap, center);
+            column-gap: 90px;
         }
 
         &__slogan {
@@ -13,9 +14,11 @@
         &__img-320 {
             display: block;
         }
-        &__item{
+
+        &__item {
             width: 180px;
         }
+
         &__item_disabled {
             display: flex;
         }

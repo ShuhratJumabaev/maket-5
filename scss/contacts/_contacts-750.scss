@@ -1,0 +1,32 @@
+@media(min-width:750px) {
+    .contacts {
+        background-image: url('../img/contacts-750.png');
+        min-height: 358px;
+
+        &__wrapper {}
+
+        &__question {
+            font-size: 16px;
+        }
+        &__title{
+            font-size: 54px;
+        }
+        &__form{
+            display: flex;
+            align-items: flex-end;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        input[class="contacts__name"],
+        input[class="contacts__tell"]{
+            margin: 0;
+            height: 50px;
+        }
+        input[class="contacts__name"]{
+            margin: 0;
+        }
+        &__submit {
+            margin: 0;
+        }
+    }
+}

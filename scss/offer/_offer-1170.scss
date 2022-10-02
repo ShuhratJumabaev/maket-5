@@ -1,0 +1,25 @@
+@media (min-width:1170px) {
+    .offer{
+        &__wrapper {
+            padding: 80px 0 80px;
+        }
+    }
+    .new {
+        &__item {
+            opacity: 1;
+            width: 263px;
+        }
+        &__img{
+            &::before{
+                top: 17px;
+                left: 15px;
+            }
+        }
+    }
+    .stock {
+        &__item {
+            opacity: 1;
+            width: 263px;
+        }
+    }
+}

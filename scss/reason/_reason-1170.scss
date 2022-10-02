@@ -20,7 +20,8 @@
         &__wrapper {
             @include flex(row wrap);
             margin-top: 80px;
-            gap: 13px;
+            column-gap: 13px;
+            row-gap: 40px;
         }
     }
 }

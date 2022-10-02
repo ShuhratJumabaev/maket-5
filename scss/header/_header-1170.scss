@@ -25,7 +25,8 @@
         &__inner {
             @include flex;
         }
-        &__logo{
+
+        &__logo {
             margin-left: 0;
         }
 
@@ -133,15 +134,25 @@
         &__label {
             padding: 15px 25px;
             position: relative;
-            &::after{
+            flex-direction: row;
+
+            &::after {
                 content: '\e903';
                 font-family: 'icomoon';
+            }
+
+            p {
+                padding: 0;
             }
         }
 
         &__dropdown-item {
             @include flex(row, center, none);
             padding: 15px 0;
+        }
+
+        #menu__check:checked~&__label>p {
+            padding: 0 0 00px;
         }
 
     }

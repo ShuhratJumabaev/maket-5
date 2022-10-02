@@ -1,0 +1,353 @@
+.offer {
+    @include bgimg(cover, auto);
+    background-image: url('../img/bgoffer.png');
+    min-height: 615px;
+
+    input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__wrapper {
+        padding: 40px 0;
+    }
+
+    &__toggle {
+        @include fontStyle(18px, center, $OpenSemiBold, #000, 1.58, bold);
+        cursor: pointer;
+    }
+
+    #offer__radio-1:checked~.toggle-1 {
+        color: $BgOrange ;
+    }
+
+    #offer__radio-2:checked~.toggle-2 {
+        color: $BgOrange;
+    }
+
+    .toggle-2 {
+        margin-left: 68px;
+    }
+
+    #offer__radio-1:checked~.new {
+        display: block;
+    }
+
+    #offer__radio-2:checked~.stock {
+        display: block;
+    }
+
+}
+
+.new {
+    overflow: hidden;
+    display: none;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 30px;
+    }
+
+    .slick-slide.slick-center {
+        opacity: 1;
+        transition: .5s;
+    }
+
+    &__slider {
+        margin-top: 45px;
+    }
+
+    &__item {
+        box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        width: 230px;
+        opacity: 0.6;
+        transition: .5s;
+        padding-bottom: 40px;
+    }
+
+    &__img-750 {
+        display: none;
+    }
+
+    &__img {
+        min-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        @include flex(column, center);
+        margin-top: 25px;
+        gap: 17px;
+    }
+
+    &__title {
+        @include fontStyle(20px, center, $VariableOpenSans, #000, 1.422, bold);
+    }
+
+    &__info {
+        @include flex(row, center);
+        gap: 10px;
+
+        P {
+            @include fontStyle(12px, center, $VariableOpenSans, #000, 1.667);
+            position: relative;
+
+            &:before {
+                @include pseudo;
+                right: -5px;
+                top: 25%;
+                width: 1px;
+                height: 50%;
+                background: #000;
+            }
+        }
+
+        p:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__price {
+        @include flex;
+        gap: 45px;
+
+        .price {
+            @include fontStyle(22px, left, $RobotoSlab, #000, 1.292, bold);
+        }
+    }
+
+    &__amount {
+        @include flex;
+        gap: 15px;
+
+        button {
+            width: 15px;
+            height: 15px;
+            border: 1px solid $BtnGray;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+    }
+
+    &__balance {
+        @include fontStyle(14px, center, $VariableOpenSans, #000, 2.031, 400);
+    }
+
+    &__btn {
+        @include flex(row, center);
+
+        &::before {
+            @include pseudo;
+
+        }
+    }
+
+    &__left-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__right-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+
+        &::after {
+            @include pseudo;
+            width: 1px;
+            height: 70%;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__link {
+        @include fontStyle(14px, center, $OpenSemiBold, #fff, 2.031, 400, uppercase);
+        @include flex;
+        gap: 30px;
+        padding: 10px 40px;
+        background-color: $BgOrange;
+        border-radius: 5px;
+
+    }
+
+    &__img {
+        position: relative;
+
+        &::before {
+            @include pseudo;
+            @include fontStyle(16px, center, $RobotoSlab, #fff, 0.876, bold);
+            content: 'new';
+            top: 14px;
+            left: 11px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.stock {
+    overflow: hidden;
+    display: none;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 30px;
+    }
+
+    .slick-slide.slick-center {
+        opacity: 1;
+        transition: .5s;
+    }
+
+    &__slider {
+        margin-top: 45px;
+    }
+
+    &__item {
+        box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        width: 230px;
+        opacity: 0.6;
+        transition: .5s;
+        padding-bottom: 40px;
+    }
+
+    &__img-750 {
+        display: none;
+    }
+
+    &__img {
+        min-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        @include flex(column, center);
+        margin-top: 25px;
+        gap: 17px;
+    }
+
+    &__title {
+        @include fontStyle(20px, center, $VariableOpenSans, #000, 1.422, bold);
+    }
+
+    &__info {
+        @include flex(row, center);
+        gap: 10px;
+
+        P {
+            @include fontStyle(12px, center, $VariableOpenSans, #000, 1.667);
+            position: relative;
+
+            &:before {
+                @include pseudo;
+                right: -5px;
+                top: 25%;
+                width: 1px;
+                height: 50%;
+                background: #000;
+            }
+        }
+
+        p:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__price {
+        @include flex;
+        gap: 45px;
+
+        .price {
+            @include fontStyle(22px, left, $RobotoSlab, #000, 1.292, bold);
+        }
+    }
+
+    &__amount {
+        @include flex;
+        gap: 15px;
+
+        button {
+            width: 15px;
+            height: 15px;
+            border: 1px solid $BtnGray;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+    }
+
+    &__balance {
+        @include fontStyle(14px, center, $VariableOpenSans, #000, 2.031, 400);
+    }
+
+    &__btn {
+        @include flex(row, center);
+
+        &::before {
+            @include pseudo;
+
+        }
+    }
+
+    &__left-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__right-btn {
+        position: relative;
+
+        &::before {
+            width: 70%;
+            height: 1px;
+            background-color: $BtnGray;
+        }
+
+        &::after {
+            @include pseudo;
+            width: 1px;
+            height: 70%;
+            background-color: $BtnGray;
+        }
+    }
+
+    &__link {
+        @include fontStyle(14px, center, $OpenSemiBold, #fff, 2.031, 400, uppercase);
+        @include flex;
+        gap: 30px;
+        padding: 10px 40px;
+        background-color: $BgOrange;
+        border-radius: 5px;
+
+    }
+}

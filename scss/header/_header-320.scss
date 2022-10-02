@@ -99,7 +99,8 @@
 
     &__label {
         @include fontStyle(10px, left, $OpenSemiBold, #000, 1.2, 700, uppercase);
-        @include flex(none, none, center);
+        display: flex;
+        flex-direction: column;
         width: 100%;
         padding: 10px;
         background: #fff;
@@ -228,6 +229,11 @@
     #menu__check:checked~&__label {
         background: $BgGreen;
         color: #fff;
+
+
+    }
+    #menu__check:checked~&__label>p {
+        padding: 0 0 10px;
     }
 
     #header__check:checked~&__wrapper>&__list {

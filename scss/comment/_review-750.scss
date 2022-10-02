@@ -1,0 +1,23 @@
+@media (min-width:750px ) {
+    .review{
+        &__slogan{
+            gap: 30px;
+            p{
+                font-size: 48px;
+            }
+        }
+        &__img-320{
+            display: none;
+        }
+        &__img-750{
+            display: block;
+        }
+        &__wrapper{
+            @include flex(row, space-between);
+            gap: 30px;
+        }
+        &__item{
+            padding: 45px 35px;
+        }
+    }
+}
