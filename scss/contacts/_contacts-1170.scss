@@ -3,9 +3,12 @@
         background-image: url('../img/contacts.png');
         min-height: 358px;
 
+        .container {
+            @include flex(row-reverse, none, none);
+        }
+
         &__wrapper {
             @include flex(column, none, none);
-            margin-left: 407px;
         }
 
         &__question {

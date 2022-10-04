@@ -1,0 +1,47 @@
+@media (min-width:750px) {
+    .about {
+        &__wrapper {
+            padding-bottom: 230px;
+        }
+
+        &__img-750 {
+            display: block;
+        }
+
+        &__slogan {
+            margin: 70px 0;
+
+            p {
+                font-size: 48px
+            }
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 22px;
+        }
+        &__text{
+            margin-top: 40px;
+        }
+
+        .disabled {
+            display: block;
+        }
+
+        input {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__img {
+            display: block;
+            float: right;
+            margin: 0 0 20px 30px;
+        }
+
+
+    }
+}

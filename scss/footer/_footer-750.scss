@@ -1,0 +1,14 @@
+@media (min-width:750px) {
+    .footer {
+        &__bottom {
+            @include flex;
+            gap: 0px;
+            padding: 45px 15px;
+        }
+
+        &__bottom-inner {
+            @include flex(row, none, center);
+            gap: 110px;
+        }
+    }
+}

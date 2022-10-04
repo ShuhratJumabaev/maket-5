@@ -1,0 +1,36 @@
+@media (min-width:1170px) {
+    .about {
+        &__wrapper {
+            padding-bottom: 160px;
+        }
+
+
+
+        &__slogan {
+            p {
+                font-size: 60px
+            }
+        }
+
+        &__title {
+            text-align: left;
+            font-size: 24px;
+        }
+
+        &__text {
+            margin-top: 40px;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__img {
+            height: 477px;
+            width: 277px;
+            margin-bottom: 30px;
+        }
+
+
+    }
+}

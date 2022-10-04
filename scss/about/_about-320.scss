@@ -1,0 +1,71 @@
+.about {
+    .container {
+        position: relative;
+
+    }
+
+    &__wrapper {
+        padding-bottom: 100px;
+    }
+
+    &__img-750 {
+        display: none;
+    }
+
+    &__slogan {
+        @include flex(row, center);
+        gap: 30px;
+        margin: 45px 0;
+
+        p {
+            @include fontStyle(44px, center, $Lemon, $TextBlue, 0.646, 400);
+        }
+    }
+
+    &__title {
+        @include fontStyle(20px, left, $VariableOpenSans, $TextBlue, 1.2, bold);
+    }
+
+    &__text {
+        p {
+            margin-top: 30px;
+            @include fontStyle(14px, left, $VariableOpenSans, $textBlack, 1.429, 400);
+        }
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__btn {
+        @include fontStyle(14px, center, $OpenSemiBold, $BgOrange, 2.031, bold, uppercase);
+        display: block;
+        width: 100%;
+        padding: 7px 0;
+        border: 2px solid $BgOrange;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #about__input:checked~.disabled {
+        display: block;
+    }
+
+    #about__input:checked~&__btn {
+        position: absolute;
+        bottom: 30px;
+        width: calc(100% - 30px);
+    }
+
+    &__img {
+        display: none;
+    }
+
+}

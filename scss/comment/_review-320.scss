@@ -67,6 +67,10 @@
 
     &__btn-heart:focus {
         color: crimson;
+
+        span {
+            color: crimson;
+        }
     }
 
     &__btn-message {

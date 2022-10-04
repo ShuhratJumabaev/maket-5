@@ -50,6 +50,7 @@
         border: none;
         border-radius: 3px;
         outline: none;
+        cursor: pointer;
     }
 
     &__text {
@@ -58,17 +59,3 @@
         margin-top: 15px;
     }
 }
-
-.container {}
-
-.contacts__wrapper {}
-
-.contacts__slogan {}
-
-.contacts__title {}
-
-.contacts__form {}
-
-.contacts__name {}
-
-.contacts__submit {}
